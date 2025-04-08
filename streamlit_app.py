@@ -9,7 +9,7 @@ from streamlit_gsheets import GSheetsConnection
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 # Customize the reading
-df = conn.read(spreadsheet=st.secrets.connections.gsheets.spreadsheet)
+df = conn.read()
 
 # Display the new dataframe
 st.dataframe(df)
